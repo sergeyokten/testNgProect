@@ -1,0 +1,7 @@
+<div>
+  <h3>{{event.title | uppercase}}</h3>
+  <div>{{event.date | date : 'shortDate'}}</div>
+  <a [routerLink]="['/event',event.id]">
+    <button>details...</button>
+  </a>
+</div>

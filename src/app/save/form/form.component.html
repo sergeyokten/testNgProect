@@ -1,0 +1,9 @@
+<form #form="ngForm" (ngSubmit)="saveEvent()">
+  <input type="text" name="title" placeholder="title" [(ngModel)]="event.title">
+  <input type="text" name="description" placeholder="description" [(ngModel)]="event.description">
+  <!--<input type="date" name="date" placeholder="date" [(ngModel)]="event.date">-->
+  <input type="date" name="date" [ngModel]="event.date | date:'yyyy-MM-dd'" (ngModelChange)="event.date = $event">
+  <button type="submit">save</button>
+
+
+</form>
